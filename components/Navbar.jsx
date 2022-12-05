@@ -2,6 +2,8 @@ import { useState, React } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
+import Logo from "./../public/assets/arkfilm-2-logo.png"
+
 
 function Navbar() {
   const [nav, setNav] = useState(false)
@@ -14,7 +16,7 @@ function Navbar() {
     <div className="bg-black fixed w-full h-24 shadow-xl z-[100]">
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Image
-          src="/../public/assets/arkfilm-2-logo.png"
+          src={Logo}
           alt="/"
           width="75"
           height="75"
