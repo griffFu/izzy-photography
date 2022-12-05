@@ -2,6 +2,7 @@ import React from 'react'
 import Subheader from './Subheader'
 import Image from 'next/image'
 import Form from './Form'
+import Beermock from "./../public/assets/contact-beer.jpg"
 
 function Contact() {
   return (
@@ -18,7 +19,7 @@ function Contact() {
               <div>
                 <Image
                   className="rounded-xl hover:scale-105 ease-in duration-300"
-                  src="/../public/assets/contact-beer.jpg"
+                  src={Beermock}
                   width="400"
                   height="400"
                   alt="/"

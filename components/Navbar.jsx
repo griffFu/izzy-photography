@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import Logo from "./../public/assets/arkfilm-2-logo.png"
-
+import Logopop from "./../public/assets/arkfilm-2-logo.png"
 
 function Navbar() {
   const [nav, setNav] = useState(false)
@@ -63,7 +63,7 @@ function Navbar() {
           <div>
             <div className="flex justify-between items-center">
               <Image
-                src="/../public/assets/arkfilm-2-logo.png"
+                src={Logopop}
                 alt="/"
                 height="75"
                 width="75"
