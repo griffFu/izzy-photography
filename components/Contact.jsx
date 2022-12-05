@@ -1,45 +1,111 @@
 import React from 'react'
+import Link from 'next/link';
 import Subheader from './Subheader'
 import Image from 'next/image'
 import Form from './Form'
-import Beermock from "./../public/assets/contact-beer.jpg"
+import ContactImg from "./../public/assets/contact-beer.jpg"
+import { AiOutlineMail } from 'react-icons/ai';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 
-function Contact() {
+const Contact = () => {
   return (
-    <div className="w-full lg:h-screen">
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
-        <p className="px-4 py-4 text-xl tracking-widest uppercase text-pink-600">
+    <div id='contact' className='w-full lg:h-screen relative z-[60]'>
+      <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
+        <p className='text-xl tracking-widest uppercase text-[#5651e5]'>
           Contact
         </p>
-        <h2 className="px-4 py-4">Get in touch</h2>
-        <div classname="grid lg:grid-cols-5 gap-8">
-          {/* left side */}
-          <div className="row-span-1 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
-            <div className="lg:p-4 h-full ">
+        <h2 className='py-4'>Get In Touch</h2>
+        <div className='grid lg:grid-cols-5 gap-8'>
+          {/* left */}
+          <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
+            <div className='lg:p-4 h-full '>
               <div>
                 <Image
-                  className="rounded-xl hover:scale-105 ease-in duration-300"
-                  src={Beermock}
-                  width="400"
-                  height="400"
-                  alt="/"
+                  className='rounded-xl hover:scale-105 ease-in duration-300'
+                  src={ContactImg}
+                  alt='/'
                 />
               </div>
               <div>
-                <h2 className="py-2">Isiah Hale</h2>
+                <h2 className='py-2'>Isiah Hale</h2>
                 <p>Videographer</p>
-                <p className="py-2 break-all">Feel free to contact me for a</p>
+                <p className='py-4'>
+                  Feel free to contact for anything from consulting to full-scale projects.
+                </p>
+              </div>
+              <div>
+                <p className='uppercase pt-8'>Connect With Me</p>
+                
+                  
+          
+             
               </div>
             </div>
           </div>
-          {/* right side */}
-          <div className="row-span-1 col-start-2 col-end-3 lg:col-span-3 w-full h-auto shadowl-xl shadow-gray-400 rounded-xl lg:p-4">
-            testing123
+
+          {/* right */}
+          <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
+            <div className='p-4'>
+              <form
+                
+              >
+                <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
+                  <div className='flex flex-col'>
+                    <label className='uppercase text-sm py-2'>Name</label>
+                    <input
+                      className='border-2 rounded-lg p-3 flex border-gray-300'
+                      type='text'
+                      name='name'
+                    />
+                  </div>
+                  <div className='flex flex-col'>
+                    <label className='uppercase text-sm py-2'>
+                      Phone Number
+                    </label>
+                    <input
+                      className='border-2 rounded-lg p-3 flex border-gray-300'
+                      type='text'
+                      name='phone'
+                    />
+                  </div>
+                </div>
+                <div className='flex flex-col py-2'>
+                  <label className='uppercase text-sm py-2'>Email</label>
+                  <input
+                    className='border-2 rounded-lg p-3 flex border-gray-300'
+                    type='email'
+                    name='email'
+                  />
+                </div>
+                <div className='flex flex-col py-2'>
+                  <label className='uppercase text-sm py-2'>Subject</label>
+                  <input
+                    className='border-2 rounded-lg p-3 flex border-gray-300'
+                    type='text'
+                    name='subject'
+                  />
+                </div>
+                <div className='flex flex-col py-2'>
+                  <label className='uppercase text-sm py-2'>Message</label>
+                  <textarea
+                    className='border-2 rounded-lg p-3 border-gray-300'
+                    rows='4'
+                    name='message'
+                  ></textarea>
+                </div>
+                <button className='w-full p-4 text-gray-100 mt-4 bg-gradient-to-r from-purple-400 to-pink-600'>
+                  Send Message
+                </button>
+              </form>
+            </div>
           </div>
         </div>
+        
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
