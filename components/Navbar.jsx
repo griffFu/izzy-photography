@@ -1,4 +1,4 @@
-import {useState,React} from 'react'
+import { useState, React } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
@@ -11,16 +11,18 @@ function Navbar() {
   }
 
   return (
-    <div className="bg-gray-600 fixed w-full h-20 shadow-xl z-[100]">
+    <div className="bg-black fixed w-full h-24 shadow-xl z-[100]">
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Image
-          src="/../public/assets/ark-film.jpg"
+          src="/../public/assets/arkfilm-2-logo.png"
           alt="/"
-          width="125"
-          height="50"
+          width="75"
+          height="75"
         />
         <div>
-          <ul className={nav ? 'hidden ' : 'hidden md:flex'}>
+          <ul
+            className={nav ? 'hidden text-white' : 'hidden md:flex text-white'}
+          >
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
             </Link>
@@ -42,7 +44,7 @@ function Navbar() {
             </Link>
           </ul>
           <div onClick={changeView} className="md:hidden">
-            <AiOutlineMenu size={25} />
+            <AiOutlineMenu color="white" size={25} />
           </div>
         </div>
       </div>
@@ -52,17 +54,17 @@ function Navbar() {
         <div
           className={
             nav
-              ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
+              ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] p-8 h-screen bg-black ease-in duration-500'
               : ' fixed left-[-100%] top-[-100%]'
           }
         >
           <div>
             <div className="flex justify-between items-center">
               <Image
-                src="/../public/assets/ark-film.png"
+                src="/../public/assets/arkfilm-2-logo.png"
                 alt="/"
-                height="100"
-                width="100"
+                height="75"
+                width="75"
               ></Image>
               <div
                 className="shadow-xl rounded-full shadow-gray-400 p-3 cursor-pointer"
@@ -72,7 +74,13 @@ function Navbar() {
               </div>
             </div>
             <div>
-              <p className="uppercase py-10">Lets Link and Build</p>
+              <p className="uppercase py-10 text-white">Lets Link and Build</p>
+              <ul className="text-white uppercase py-3 ">
+                <li className="my-3">About</li>
+                <li className="my-3">Projects</li>
+                <li className="my-3">Skills</li>
+                <li className="my-3">Contact me</li>
+              </ul>
             </div>
           </div>
         </div>
